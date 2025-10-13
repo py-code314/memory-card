@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { ImageList, Image } from './components/ImageList';
-import ScoreBoard from './components/ScoreBoard';
-
+import { ImageList, Image } from './components/ImageList'
+import ScoreBoard from './components/ScoreBoard'
+import { shuffleCards } from './utils/randomizeArray'
 
 import './App.css'
 
@@ -11,6 +11,7 @@ function App() {
   const [data, setData] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
+  const [cardIds, setCardIds] = useState([])
   // TODO: useReducer for state
 
   // console.log(data)
@@ -46,14 +47,32 @@ function App() {
     }
 
     fetchData()
-    
+
     // Clean-up function
     return () => {
       ignore = true
     }
   }, [])
 
-  
+  function handleClick(e) {
+    const cardId = e.currentTarget.id
+    shuffleCards(data)
+
+    // console.log(e.currentTarget.id)
+    // Track card clicks for scoring
+    if (!cardIds.includes(cardId)) {
+      setCurrentScore(currentScore + 1)
+      setCardIds([...cardIds, cardId])
+    } else {
+      if (currentScore > bestScore) {
+        setBestScore(currentScore)
+      }
+
+      setCurrentScore(0)
+      setCardIds([])
+    }
+  }
+
   return (
     <>
       <h1>Memory Game</h1>
@@ -65,7 +84,11 @@ function App() {
         <ImageList>
           {data &&
             data.map((character) => (
-              <Image key={character.id} character={character} />
+              <Image
+                key={character.id}
+                character={character}
+                handleClick={handleClick}
+              />
             ))}
         </ImageList>
       </div>

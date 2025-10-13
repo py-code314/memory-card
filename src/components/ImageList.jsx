@@ -5,10 +5,10 @@ export const ImageList = ({children}) => {
 }
 
 // TODO: Remove all button styles with - all:unset
-export const Image = ({character}) => {
+export const Image = ({character, handleClick}) => {
   return (
     <li className="image">
-      <button type="button">
+      <button type="button" id={character.id} onClick={handleClick}>
         <img src={character.image} alt="" />
         <p>{character.name}</p>
       </button>
