@@ -66,7 +66,11 @@ ul {
    END OF RESET 
    =================== */
 
-
+/* FONTS */
+@font-face {
+  font-family: 'Creepster';
+  src: url(./assets/fonts/creepster-font/Creepster-Regular.ttf);
+}
 
 /* ===================
    CSS VARIABLES
@@ -93,8 +97,7 @@ ul {
   --fs-675: 1.4375rem; /* 23px */
   --fs-700: 1.5rem; /* 24px */
   --fs-750: 1.625rem; /* 26px */
-   --fs-800: 1.75rem; /* 28px */
-
+  --fs-800: 1.75rem; /* 28px */
 
   /* Spaces */
   --space-40: 0.25rem;
@@ -133,21 +136,22 @@ ul {
   --space-1700: 4rem; /* 64px */
   --space-2100: 5rem; /* 80px */
 
-  
-
-
-
   /* Font weights */
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
   --fw-extra-bold: 800;
 
+  /* Font families */
+  --ff-creepster: 'Creepster';
+
   /* Colors */
   --clr-black: hsl(0, 0%, 0%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-red: hsl(0, 100%, 50%);
- 
+  --clr-green: #00afc8;
+  --clr-purple: #952695;
+  --clr-yellow: rgb(255, 255, 0);
 
   /* Utilities */
   --radius-1: 0.3125rem; /* 5px */
@@ -156,4 +160,12 @@ ul {
   --shadow-1: 0px 0px 10px 0px hsla(197, 37%, 24%, 0.36);
   --shadow-2: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.5);
   --shadow-3: 0px 3px 10px 0px hsla(0, 0%, 0%, 0.7);
+}
+
+body {
+  background: var(--clr-purple) url('./assets/images/image-blue-bubble.jpeg')
+    no-repeat center;
+  background-size: 100% 100%;
+  /* background: radial-gradient(circle at 50% 50%, #ffffff, #eeddec, #ddbcda, #cc9bc8, #ba7bb6, #a75aa4, #943792, #800080); */
+  font-family: 'Proza Libre', sans-serif;
 }

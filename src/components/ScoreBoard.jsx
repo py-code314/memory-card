@@ -1,7 +1,9 @@
-const ScoreBoard = ({currentScore, bestScore}) => {
-  return (<div>
-    <p>Current Score: {currentScore}</p>
-    <p>Best Score: {bestScore}</p>
+import '../styles/ScoreBoard.css'
+
+const ScoreBoard = ({ currentScore, bestScore }) => {
+  return (<div className='score'>
+    <p className='score__current'>Current Score: {currentScore}</p>
+    <p className='score__best'>Best Score: {bestScore}</p>
   </div> );
 }
  

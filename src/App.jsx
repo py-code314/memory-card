@@ -4,6 +4,8 @@ import ScoreBoard from './components/ScoreBoard'
 import { shuffleCards } from './utils/randomizeArray'
 
 import './App.css'
+import rickIcon from './assets/images/icon-rick.svg'
+import mortyIcon from './assets/images/icon-morty.svg'
 
 function App() {
   const [currentScore, setCurrentScore] = useState(0)
@@ -75,24 +77,31 @@ function App() {
 
   return (
     <>
-      <h1>Memory Game</h1>
-      <ScoreBoard currentScore={currentScore} bestScore={bestScore} />
-      <div>
-        {isLoading && <p>...Loading</p>}
-        {isError && <p>Error</p>}
-        {data && shuffleCards(data)}
+      <header className='header'>
+        <img src={rickIcon} alt="" width={50} height={50} />
+        <h1 className="title">Rick & Morty Memory Mayhem</h1>
+        <img src={mortyIcon} alt="" width={50} height={50} />
+      </header>
 
-        <ImageList>
-          {data &&
-            data.map((character) => (
-              <Image
-                key={character.id}
-                character={character}
-                handleClick={handleClick}
-              />
-            ))}
-        </ImageList>
-      </div>
+      <main className="main">
+        <ScoreBoard currentScore={currentScore} bestScore={bestScore} />
+        <div className="cards">
+          {isLoading && <p>...Loading</p>}
+          {isError && <p>Error</p>}
+          {data && shuffleCards(data)}
+
+          <ImageList>
+            {data &&
+              data.map((character) => (
+                <Image
+                  key={character.id}
+                  character={character}
+                  handleClick={handleClick}
+                />
+              ))}
+          </ImageList>
+        </div>
+      </main>
     </>
   )
 }

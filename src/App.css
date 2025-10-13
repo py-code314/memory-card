@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-400);
+  color: var(--clr-green);
+  font-size: var(--fs-600);
+  padding: var(--space-400);
+  
+}
+/* TODO: Check title for mobile width */
+.title {
+  font-family: var(--ff-creepster);
+  text-shadow: 2px 2px 0px rgba(255, 255, 0, 1), 
+               2px -2px 0px rgba(255, 255, 0, 1), 
+			   -2px 2px 0px rgba(255, 255, 0, 1), 
+			   -2px -2px 0px rgba(255, 255, 0, 1), 
+			   2px 0px 0px rgba(255, 255, 0, 1), 
+			   0px 2px 0px rgba(255, 255, 0, 1), 
+			   -2px 0px 0px rgba(255, 255, 0, 1), 
+			   0px -2px 0px rgba(255, 255, 0, 1);
+}
