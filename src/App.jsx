@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { ImageList, Image } from './components/ImageList';
+
 
 import './App.css'
 
@@ -8,11 +10,12 @@ function App() {
   const [data, setData] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
+  // TODO: useReducer for state
 
   // console.log(data)
 
   useEffect(() => {
-    // Ignore flag and setData(null) - for safety and future proofing
+    // Add ignore flag and setData(null) - for safety and future proofing
     let ignore = false
     setData(null)
 
@@ -49,22 +52,17 @@ function App() {
     }
   }, [])
 
-  // * Remove all button styles with - all:unset
+  
   return (
     <div>
       {isLoading && <p>...Loading</p>}
       {isError && <p>Error</p>}
-      {data &&
-        data.map((character) => (
-          <ul key={character.id}>
-            <li>
-              <button type="button">
-                <img src={character.image} alt="" />
-                <p>{character.name}</p>
-              </button>
-            </li>
-          </ul>
-        ))}
+      
+      <ImageList>
+        {data &&
+          data.map(character =>  <Image key={character.id} character={character} /> 
+        )}
+      </ImageList>
     </div>
   )
 }
