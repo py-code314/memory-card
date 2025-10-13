@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import { ImageList, Image } from './components/ImageList';
+import ScoreBoard from './components/ScoreBoard';
 
 
 import './App.css'
 
 function App() {
-  // const [currentScore, setCurrentScore] = useState(0)
-  // const [bestScore, setBestScore] = useState(0)
+  const [currentScore, setCurrentScore] = useState(0)
+  const [bestScore, setBestScore] = useState(0)
   const [data, setData] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
@@ -54,16 +55,21 @@ function App() {
 
   
   return (
-    <div>
-      {isLoading && <p>...Loading</p>}
-      {isError && <p>Error</p>}
-      
-      <ImageList>
-        {data &&
-          data.map(character =>  <Image key={character.id} character={character} /> 
-        )}
-      </ImageList>
-    </div>
+    <>
+      <h1>Memory Game</h1>
+      <ScoreBoard currentScore={currentScore} bestScore={bestScore} />
+      <div>
+        {isLoading && <p>...Loading</p>}
+        {isError && <p>Error</p>}
+
+        <ImageList>
+          {data &&
+            data.map((character) => (
+              <Image key={character.id} character={character} />
+            ))}
+        </ImageList>
+      </div>
+    </>
   )
 }
 
