@@ -80,6 +80,7 @@ function App() {
       <div>
         {isLoading && <p>...Loading</p>}
         {isError && <p>Error</p>}
+        {data && shuffleCards(data)}
 
         <ImageList>
           {data &&
