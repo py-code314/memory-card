@@ -103,6 +103,9 @@ function App() {
               ))}
           </ImageList>
         </div>
+        <div className="footer">
+          <p className="footer__text">Wubba lubba dub dub</p>
+        </div>
       </main>
     </>
   )
