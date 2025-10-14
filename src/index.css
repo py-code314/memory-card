@@ -1,3 +1,4 @@
+
 /* ===================
    JOSH COMEAU'S RESET 
    =================== */
@@ -77,6 +78,11 @@ ul {
   src: url(./assets/fonts/bungee-font/Bungee-Regular.ttf);
 }
 
+@font-face {
+  font-family: 'Frijole';
+  src: url(./assets/fonts/frijole-font/Frijole-Regular.ttf);
+}
+
 /* ===================
    CSS VARIABLES
    =================== */
@@ -142,6 +148,8 @@ ul {
   --space-1700: 4rem; /* 64px */
   --space-2100: 5rem; /* 80px */
 
+  --width-content: 75rem; /* 1200px */
+
   /* Font weights */
   --fw-regular: 400;
   --fw-medium: 500;
@@ -151,12 +159,14 @@ ul {
   /* Font families */
   --ff-creepster: 'Creepster';
   --ff-bungee: 'Bungee';
+  --ff-frijole: 'Frijole';
 
   /* Colors */
   --clr-black: hsl(0, 0%, 0%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-red: hsl(0, 100%, 50%);
   --clr-green: #00afc8;
+  --clr-aqua: #00ffff;
   --clr-purple: #952695;
   --clr-yellow: #ecf03d;
   --clr-florescent-green: #80fd5f;
@@ -176,4 +186,13 @@ body {
   background-size: 100% 100%;
   /* background: radial-gradient(circle at 50% 50%, #ffffff, #eeddec, #ddbcda, #cc9bc8, #ba7bb6, #a75aa4, #943792, #800080); */
   font-family: 'Proza Libre', sans-serif;
+  padding: 0 var(--space-400);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-400);
+  max-width: var(--width-content);
+  margin: auto;
 }

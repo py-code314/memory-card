@@ -1,16 +1,17 @@
-export const ImageList = ({children}) => {
-  return (<ul className="image-list">
+import '../styles/ImageList.css';
+
+export const ImageList = ({ children }) => {
+  return (<ul className="characters">
     {children}
   </ul> );
 }
 
-// TODO: Remove all button styles with - all:unset
 export const Image = ({character, handleClick}) => {
   return (
-    <li className="image">
-      <button type="button" id={character.id} onClick={handleClick}>
+    <li className="character">
+      <button className='character__btn' type="button" id={character.id} onClick={handleClick}>
         <img src={character.image} alt="" />
-        <p>{character.name}</p>
+        <p className='character__name'>{character.name}</p>
       </button>
     </li>
   )

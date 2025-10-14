@@ -75,6 +75,8 @@ function App() {
     }
   }
 
+  // TODO: Extract header component
+  // TODO: Fix title contrast check
   return (
     <>
       <header className='header'>
