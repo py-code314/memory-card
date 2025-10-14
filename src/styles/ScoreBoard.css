@@ -1,0 +1,40 @@
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-800);
+}
+
+.score__current,
+.score__best {
+  /* border: 3px outset var(--clr-florescent-green); */
+  padding: var(--space-100) var(--space-400);
+  border-radius: var(--radius-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-bungee);
+  position: relative;
+}
+
+.score__current:before,
+.score__best:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--clr-florescent-green);
+  clip-path: polygon(0 18.39px,10px 10px,18.39px 0,calc(100% - 18.39px) 0,calc(100% - 10px) 10px,100% 18.39px,100% calc(100% - 18.39px),calc(100% - 10px) calc(100% - 10px),calc(100% - 18.39px) 100%,18.39px 100%,10px calc(100% - 10px),0 calc(100% - 18.39px),0 18.39px,3px  calc(18.39px + 1.4px),3px calc(100% - 18.39px - 1.4px),calc(10px + 2.13px) calc(100% - 10px - 2.13px),calc(18.39px + 1.4px) calc(100% - 3px),calc(100% - 18.39px - 1.4px) calc(100% - 3px),calc(100% - 10px - 2.13px) calc(100% - 10px - 2.13px),calc(100% - 3px) calc(100% - 18.39px - 1.4px),calc(100% - 3px) calc(18.39px + 1.4px),calc(100% - 10px - 2.13px) calc(10px + 2.13px),calc(100% - 18.39px - 1.4px) 3px,calc(18.39px + 1.4px) 3px,calc(10px + 2.13px) calc(10px + 2.13px),3px calc(18.39px + 1.4px));
+}
+
+.score__label {
+  font-size: var(--fs-500);
+
+  text-transform: uppercase;
+  color: var(--clr-florescent-green);
+}
+
+.score__number {
+  font-size: var(--fs-950);
+  color: var(--clr-yellow);
+}

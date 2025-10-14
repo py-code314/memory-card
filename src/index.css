@@ -72,6 +72,11 @@ ul {
   src: url(./assets/fonts/creepster-font/Creepster-Regular.ttf);
 }
 
+@font-face {
+  font-family: 'Bungee';
+  src: url(./assets/fonts/bungee-font/Bungee-Regular.ttf);
+}
+
 /* ===================
    CSS VARIABLES
    =================== */
@@ -98,6 +103,7 @@ ul {
   --fs-700: 1.5rem; /* 24px */
   --fs-750: 1.625rem; /* 26px */
   --fs-800: 1.75rem; /* 28px */
+  --fs-950: 2.125rem; /* 34px */
 
   /* Spaces */
   --space-40: 0.25rem;
@@ -144,6 +150,7 @@ ul {
 
   /* Font families */
   --ff-creepster: 'Creepster';
+  --ff-bungee: 'Bungee';
 
   /* Colors */
   --clr-black: hsl(0, 0%, 0%);
@@ -151,7 +158,8 @@ ul {
   --clr-red: hsl(0, 100%, 50%);
   --clr-green: #00afc8;
   --clr-purple: #952695;
-  --clr-yellow: rgb(255, 255, 0);
+  --clr-yellow: #ecf03d;
+  --clr-florescent-green: #80fd5f;
 
   /* Utilities */
   --radius-1: 0.3125rem; /* 5px */
