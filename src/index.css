@@ -191,7 +191,7 @@ body {
     no-repeat center;
   background-size: 100% 100%;
   /* background: radial-gradient(circle at 50% 50%, #ffffff, #eeddec, #ddbcda, #cc9bc8, #ba7bb6, #a75aa4, #943792, #800080); */
-  font-family: 'Proza Libre', sans-serif;
+  /* font-family: 'Proza Libre', sans-serif; */
   padding: 0 var(--space-400);
 }
 
