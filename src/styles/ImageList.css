@@ -1,21 +1,25 @@
 .characters {
   border: 3px solid var(--clr-florescent-green);
-  padding: var(--space-800);
+  padding: clamp(1rem, 0.727rem + 1.364vw, 1.75rem);
   border-radius: var(--radius-2);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: var(--space-800);
-  position: relative;
+  gap: clamp(1rem, 0.727rem + 1.364vw, 1.75rem);
   box-shadow:  0px 0px 5px 3px #80fd5f;
 }
 
 .character__btn {
-  all: unset;
+  background-color: transparent;
   border: 2px solid var(--clr-florescent-green);
   border-radius: var(--radius-2);
   overflow: hidden;
   text-align: center;
   cursor: pointer;
+  /* Make sure button occupies whole width of li */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .character__btn:hover {
@@ -32,9 +36,20 @@
   }
 }
 
+/* Image takes up all the remaining height left after character name height */
+.character__image-container {
+  flex: 1
+}
+.character__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .character__name {
-  padding: var(--space-400) 0;
+  padding: var(--space-100) 0;
   color: var(--clr-aqua);
   background-color: #0000009a;
   font-family: var(--ff-frijole);
+  font-size: clamp(0.75rem, 0.659rem + 0.455vw, 1rem);
 }

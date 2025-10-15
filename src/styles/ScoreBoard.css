@@ -28,7 +28,7 @@
 }
 
 .score__label {
-  font-size: clamp(0.75rem, 0.591rem + 0.795vw, 1.188rem);
+  font-size: clamp(0.75rem, 0.614rem + 0.682vw, 1.125rem);
   text-transform: uppercase;
   color: var(--clr-florescent-green);
 }
