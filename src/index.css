@@ -110,7 +110,6 @@ ul {
   --fs-800: 1.75rem; /* 28px */
   --fs-950: 2.125rem; /* 34px */
   --fs-1000: 2.25rem;
-  /* --fs-1050: 2.375rem; */
   --fs-1100: 2.5rem; /* 40px */
   --fs-1150: 2.625rem; /* 42px */
   --fs-1200: 2.75rem; /* 44px */
@@ -146,6 +145,7 @@ ul {
   --space-1100: 2.5rem; /* 40px */
   --space-1150: 2.625rem; /* 42px */
   --space-1200: 2.75rem; /* 44px */
+  --space-1225: 2.875rem; /* 46px */
   --space-1275: 2.9375rem; /* 47px */
   --space-1600: 3.75rem; /* 60px */
   --space-1650: 3.875rem; /* 62px */
@@ -168,12 +168,13 @@ ul {
   --ff-frijole: 'Frijole';
 
   /* Colors */
-  --clr-black: hsl(0, 0%, 0%);
+  --clr-black: #000000;
   --clr-white: hsl(0, 0%, 100%);
   --clr-red: hsl(0, 100%, 50%);
   --clr-green: #00afc8;
   --clr-aqua: #00ffff;
   --clr-purple: #952695;
+  --clr-dark-purple: #302434;
   --clr-yellow: #ecf03d;
   --clr-florescent-green: #80fd5f;
 
@@ -187,11 +188,10 @@ ul {
 }
 
 body {
-  background: var(--clr-purple) url('./assets/images/image-blue-bubble.jpeg')
+  background: var(--clr-dark-purple) url('./assets/images/image-blue-bubble.jpeg')
     no-repeat center;
   background-size: 100% 100%;
   /* background: radial-gradient(circle at 50% 50%, #ffffff, #eeddec, #ddbcda, #cc9bc8, #ba7bb6, #a75aa4, #943792, #800080); */
-  /* font-family: 'Proza Libre', sans-serif; */
   padding: 0 var(--space-400);
 }
 

@@ -22,7 +22,7 @@
 
   border: 5px solid var(--clr-florescent-green);
   max-width: var(--width-modal);
-  padding: var(--space-1000) var(--space-1600);
+  padding: var(--space-1225);
   z-index: 100;
   background: var(--clr-purple) url('../assets/images/space.jpeg') no-repeat
     center;
@@ -30,19 +30,21 @@
   box-shadow: inset #009688 0 0 0 5px, inset #059c8e 0 0 0 1px,
     inset #0cab9c 0 0 0 10px, inset #1fbdae 0 0 0 11px, inset #8ce9ff 0 0 0 16px,
     inset #48e4d6 0 0 0 17px, inset #e5f9f7 0 0 0 21px, inset #bfecf7 0 0 0 22px;
+  text-align: center;
 }
 
 .dialog__title,
 .dialog__btn {
   color: var(--clr-yellow);
-  font-size: var(--fs-1200);
+  font-size: clamp(1.875rem, 1.557rem + 1.591vw, 2.75rem);
   font-family: var(--ff-creepster);
 }
+
 
 .dialog__score {
   color: var(--clr-green);
   font-family: var(--ff-bungee);
-  font-size: var(--fs-800);
+  font-size: clamp(1.25rem, 1.068rem + 0.909vw, 1.75rem);
 }
 
 .dialog__btn {
