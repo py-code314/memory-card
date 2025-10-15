@@ -110,6 +110,11 @@ ul {
   --fs-750: 1.625rem; /* 26px */
   --fs-800: 1.75rem; /* 28px */
   --fs-950: 2.125rem; /* 34px */
+  --fs-1000: 2.25rem;
+  /* --fs-1050: 2.375rem; */
+  --fs-1100: 2.5rem; /* 40px */
+  --fs-1150: 2.625rem; /* 42px */
+  --fs-1200: 2.75rem; /* 44px */
 
   /* Spaces */
   --space-40: 0.25rem;
@@ -149,6 +154,7 @@ ul {
   --space-2100: 5rem; /* 80px */
 
   --width-content: 75rem; /* 1200px */
+  --width-modal: 31.25rem; /* 500px */
 
   /* Font weights */
   --fw-regular: 400;

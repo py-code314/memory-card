@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import { ImageList, Image } from './components/ImageList'
 import ScoreBoard from './components/ScoreBoard'
+import ModalDialog from './components/ModalDialog'
 import { shuffleCards } from './utils/randomizeArray'
 
 import './App.css'
 import rickIcon from './assets/images/icon-rick.svg'
 import mortyIcon from './assets/images/icon-morty.svg'
+
 
 function App() {
   const [currentScore, setCurrentScore] = useState(0)
@@ -14,6 +16,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
   const [cardIds, setCardIds] = useState([])
+  const [showModal, setShowModal] = useState(false)
   // TODO: useReducer for state
 
   // console.log(data)
@@ -56,7 +59,7 @@ function App() {
     }
   }, [])
 
-  function handleClick(e) {
+  function handleCardClick(e) {
     const cardId = e.currentTarget.id
     shuffleCards(data)
 
@@ -72,14 +75,26 @@ function App() {
 
       setCurrentScore(0)
       setCardIds([])
+      setShowModal(true)
     }
+  }
+
+  function handleBtnClick() {
+    setShowModal(false)
   }
 
   // TODO: Extract header component
   // TODO: Fix title contrast check
   return (
     <>
-      <header className='header'>
+      {showModal && (
+        <ModalDialog
+          currentScore={currentScore}
+          bestScore={bestScore}
+          handleClick={handleBtnClick}
+        />
+      )}
+      <header className="header">
         <img src={rickIcon} alt="" width={50} height={50} />
         <h1 className="title">Rick & Morty Memory Mayhem</h1>
         <img src={mortyIcon} alt="" width={50} height={50} />
@@ -98,7 +113,7 @@ function App() {
                 <Image
                   key={character.id}
                   character={character}
-                  handleClick={handleClick}
+                  handleClick={handleCardClick}
                 />
               ))}
           </ImageList>
