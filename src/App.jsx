@@ -8,7 +8,6 @@ import './App.css'
 import rickIcon from './assets/images/icon-rick.svg'
 import mortyIcon from './assets/images/icon-morty.svg'
 
-
 function App() {
   const [currentScore, setCurrentScore] = useState(0)
   const [bestScore, setBestScore] = useState(0)
@@ -95,9 +94,25 @@ function App() {
         />
       )}
       <header className="header">
-        <img src={rickIcon} alt="" width={50} height={50} />
-        <h1 className="title">Rick & Morty Memory Mayhem</h1>
-        <img src={mortyIcon} alt="" width={50} height={50} />
+        <img
+          className="header__icon"
+          src={rickIcon}
+          alt=""
+          width={70}
+          height={70}
+        />
+
+        <h1 className="title">
+          <span>Rick & Morty</span> <span>Memory Mayhem</span>
+        </h1>
+
+        <img
+          className="header__icon"
+          src={mortyIcon}
+          alt=""
+          width={70}
+          height={70}
+        />
       </header>
 
       <main className="main">

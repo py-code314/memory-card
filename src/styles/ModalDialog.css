@@ -53,7 +53,7 @@
   box-shadow: 2px 2px var(--clr-yellow);
   cursor: pointer;
 }
-
+/* TODO: Add prefers-reduced-motion for animation */
 .dialog__btn:hover {
   animation: flip-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
 }

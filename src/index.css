@@ -1,4 +1,3 @@
-
 /* ===================
    JOSH COMEAU'S RESET 
    =================== */
@@ -151,6 +150,7 @@ ul {
   --space-1600: 3.75rem; /* 60px */
   --space-1650: 3.875rem; /* 62px */
   --space-1700: 4rem; /* 64px */
+  --space-1850: 4.375rem; /* 70px */
   --space-2100: 5rem; /* 80px */
 
   --width-content: 75rem; /* 1200px */
