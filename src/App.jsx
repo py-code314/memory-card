@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { ImageList, Image } from './components/ImageList'
+import Header from './components/Header'
 import ScoreBoard from './components/ScoreBoard'
 import ModalDialog from './components/ModalDialog'
 import { shuffleCards } from './utils/randomizeArray'
-import rickIcon from './assets/images/icon-rick.svg'
-import mortyIcon from './assets/images/icon-morty.svg'
+
 import './App.css'
 
 function App() {
@@ -82,27 +82,7 @@ function App() {
   console.log(isLoading)
   return (
     <>
-      <header className="header">
-        <img
-          className="header__icon"
-          src={rickIcon}
-          alt=""
-          width={70}
-          height={70}
-        />
-
-        <h1 className="title">
-          <span>Rick & Morty</span> <span>Memory Mayhem</span>
-        </h1>
-
-        <img
-          className="header__icon"
-          src={mortyIcon}
-          alt=""
-          width={70}
-          height={70}
-        />
-      </header>
+      <Header />
 
       <main className="main">
         {showModal && (
