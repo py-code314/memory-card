@@ -131,7 +131,7 @@ ul {
 }
 
 body {
-  background: var(--clr-dark-purple) url('./assets/images/image-blue-bubble.jpeg')
+  background: var(--clr-dark-purple) url('./assets/images/blue-bubble.jpeg')
     no-repeat center;
   background-size: 100% 100%;
   padding: 0 var(--space-400);

@@ -1,5 +1,5 @@
-import rickIcon from '../assets/images/icon-rick.svg'
-import mortyIcon from '../assets/images/icon-morty.svg'
+import rickIcon from '../assets/images/rick.svg'
+import mortyIcon from '../assets/images/morty.svg'
 import '../styles/Header.css'
 
 const Header = () => {

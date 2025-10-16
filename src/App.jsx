@@ -29,22 +29,21 @@ function App() {
         const response = await fetch(
           'https://rickandmortyapi.com/api/character/[1,2,4,5,47,103,118,242,244,331,372,629]'
         )
-        // Check response for HTTP errors
+
         if (!response.ok) {
-          throw new Error()
+          throw new Error('HTTP error')
         }
-        const data = await response.json()
+
+        const characters = await response.json()
         if (!ignore) {
-          const shuffledData = shuffleCards(data)
-          setData(shuffledData)
+          setData(shuffleCards(characters))
         }
       } catch (error) {
-        // Catches network errors
         console.error('Error fetching data:', error)
         setIsError(true)
+      } finally {
+        setIsLoading(false)
       }
-
-      setIsLoading(false)
     }
 
     fetchData()
