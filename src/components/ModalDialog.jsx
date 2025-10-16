@@ -5,7 +5,7 @@ const ModalDialog = ({ currentScore, bestScore, handleClick }) => {
     <>
       <div className="backdrop"></div>
       <div className="dialog">
-        <p className='dialog__title'>Game Over!</p>
+        <h2 className='dialog__title'>Game Over!</h2>
         <p className='dialog__score'>Current Score: {currentScore}</p>
         <p className='dialog__score'>Best Score: {bestScore}</p>
         <button className='dialog__btn' type="button" onClick={handleClick}>

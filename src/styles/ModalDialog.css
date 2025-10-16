@@ -24,8 +24,8 @@
   max-width: var(--width-modal);
   padding: var(--space-1225);
   z-index: 100;
-  background: var(--clr-purple) url('../assets/images/space.jpeg') no-repeat
-    center;
+  background: var(--clr-dark-purple) url('../assets/images/space.jpeg')
+    no-repeat center;
   background-size: 100% 100%;
   box-shadow: inset #009688 0 0 0 5px, inset #059c8e 0 0 0 1px,
     inset #0cab9c 0 0 0 10px, inset #1fbdae 0 0 0 11px, inset #8ce9ff 0 0 0 16px,
@@ -40,7 +40,6 @@
   font-family: var(--ff-creepster);
 }
 
-
 .dialog__score {
   color: var(--clr-green);
   font-family: var(--ff-bungee);
@@ -49,15 +48,30 @@
 
 .dialog__btn {
   background-color: transparent;
-  border: 2px inset var(--clr-yellow);
+  border: 3px inset var(--clr-yellow);
   border-radius: var(--radius-2);
   padding: 0 var(--space-400);
-  box-shadow: 2px 2px var(--clr-yellow);
   cursor: pointer;
+  transition: all 0.7s ease-in;
 }
-/* TODO: Add prefers-reduced-motion for animation */
-.dialog__btn:hover {
+
+.dialog__btn:hover,
+.dialog__btn:focus-visible {
   animation: flip-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+
+.dialog__btn:focus-visible {
+  outline: 1px inset var(--clr-yellow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialog__btn:hover,
+  .dialog__btn:focus-visible {
+    animation: none;
+    box-shadow: none;
+    outline: 2px solid var(--clr-yellow);
+    outline-offset: 2px;
+  }
 }
 
 @keyframes flip-right {

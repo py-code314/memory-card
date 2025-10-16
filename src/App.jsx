@@ -86,13 +86,6 @@ function App() {
   // TODO: Fix title contrast check
   return (
     <>
-      {showModal && (
-        <ModalDialog
-          currentScore={currentScore}
-          bestScore={bestScore}
-          handleClick={handleBtnClick}
-        />
-      )}
       <header className="header">
         <img
           className="header__icon"
@@ -116,6 +109,13 @@ function App() {
       </header>
 
       <main className="main">
+        {showModal && (
+          <ModalDialog
+            currentScore={currentScore}
+            bestScore={bestScore}
+            handleClick={handleBtnClick}
+          />
+        )}
         <ScoreBoard currentScore={currentScore} bestScore={bestScore} />
         <div className="cards">
           {isLoading && <p>...Loading</p>}
