@@ -8,7 +8,7 @@
 }
 
 .title {
-  color: var(--clr-green);
+  color: var(--clr-turquoise);
   font-size: clamp(1.375rem, 0.739rem + 3.182vw, 3.125rem);
   font-family: var(--ff-creepster);
   text-shadow: 2px 2px 0px rgba(255, 255, 0, 1),

@@ -1,5 +1,5 @@
 .backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--clr-black);
   position: fixed;
   left: 0;
   top: 0;
@@ -20,7 +20,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
-  border: 5px solid var(--clr-florescent-green);
+  border: 5px solid var(--clr-screamin-green);
   max-width: var(--width-modal);
   padding: var(--space-1225);
   z-index: 100;
@@ -41,7 +41,7 @@
 }
 
 .dialog__score {
-  color: var(--clr-green);
+  color: var(--clr-turquoise);
   font-family: var(--ff-bungee);
   font-size: clamp(1.25rem, 1.068rem + 0.909vw, 1.75rem);
 }

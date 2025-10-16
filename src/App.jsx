@@ -16,21 +16,16 @@ function App() {
   const [bestScore, setBestScore] = useState(0)
   const [showModal, setShowModal] = useState(false)
 
-  // console.log(data)
-
   useEffect(() => {
     // Add ignore flag and setData(null) - for safety and future proofing
     let ignore = false
-    console.log('setData to null')
     setData(null)
 
     async function fetchData() {
-      console.log('isLoading true')
       setIsLoading(true)
       setIsError(false)
 
       try {
-        console.log('fetching data')
         const response = await fetch(
           'https://rickandmortyapi.com/api/character/[1,2,4,5,47,103,118,242,244,331,372,629]'
         )
@@ -40,17 +35,14 @@ function App() {
         }
         const data = await response.json()
         if (!ignore) {
-          // console.log('setData to data')
           setData(data)
-          // console.log('isLoading second time')
-          // setIsLoading(false)
         }
       } catch (error) {
         // Catches network errors
         console.error('Error fetching data:', error)
         setIsError(true)
       }
-      // console.log('isLoading false')
+
       setIsLoading(false)
     }
 
@@ -66,7 +58,6 @@ function App() {
     const cardId = e.currentTarget.id
     shuffleCards(data)
 
-    // console.log(e.currentTarget.id)
     // Track card clicks for scoring
     if (!cardIds.includes(cardId)) {
       setCurrentScore(currentScore + 1)

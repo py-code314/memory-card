@@ -23,14 +23,14 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--clr-florescent-green);
+  background: var(--clr-screamin-green);
   clip-path: polygon(0 18.39px,10px 10px,18.39px 0,calc(100% - 18.39px) 0,calc(100% - 10px) 10px,100% 18.39px,100% calc(100% - 18.39px),calc(100% - 10px) calc(100% - 10px),calc(100% - 18.39px) 100%,18.39px 100%,10px calc(100% - 10px),0 calc(100% - 18.39px),0 18.39px,3px  calc(18.39px + 1.4px),3px calc(100% - 18.39px - 1.4px),calc(10px + 2.13px) calc(100% - 10px - 2.13px),calc(18.39px + 1.4px) calc(100% - 3px),calc(100% - 18.39px - 1.4px) calc(100% - 3px),calc(100% - 10px - 2.13px) calc(100% - 10px - 2.13px),calc(100% - 3px) calc(100% - 18.39px - 1.4px),calc(100% - 3px) calc(18.39px + 1.4px),calc(100% - 10px - 2.13px) calc(10px + 2.13px),calc(100% - 18.39px - 1.4px) 3px,calc(18.39px + 1.4px) 3px,calc(10px + 2.13px) calc(10px + 2.13px),3px calc(18.39px + 1.4px));
 }
 
 .score__label {
   font-size: clamp(0.75rem, 0.614rem + 0.682vw, 1.125rem);
   text-transform: uppercase;
-  color: var(--clr-florescent-green);
+  color: var(--clr-screamin-green);
 }
 
 .score__number {
