@@ -35,7 +35,8 @@ function App() {
         }
         const data = await response.json()
         if (!ignore) {
-          setData(data)
+          const shuffledData = shuffleCards(data)
+          setData(shuffledData)
         }
       } catch (error) {
         // Catches network errors
@@ -77,9 +78,6 @@ function App() {
     setShowModal(false)
   }
 
-  // TODO: Extract header component
-  // TODO: Fix title contrast check
-  console.log(isLoading)
   return (
     <>
       <Header />
@@ -94,7 +92,6 @@ function App() {
         )}
         <ScoreBoard currentScore={currentScore} bestScore={bestScore} />
         <div className="cards">
-          {data && shuffleCards(data)}
           <ImageList isLoading={isLoading} isError={isError}>
             {data &&
               data.map((character) => (
