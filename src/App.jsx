@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { ImageList, Image } from './components/ImageList'
 import Header from './components/Header'
 import ScoreBoard from './components/ScoreBoard'
+import Instructions from './components/Instructions'
 import ModalDialog from './components/ModalDialog'
 import { shuffleCards } from './utils/randomizeArray'
 
@@ -97,6 +98,7 @@ function App() {
           />
         )}
         <ScoreBoard currentScore={currentScore} bestScore={bestScore} />
+        <Instructions />
         <div className="cards">
           <ImageList isLoading={isLoading} isError={isError}>
             {/* Loop through data and render Image component for each character */}

@@ -1,0 +1,15 @@
+.instructions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.instructions__list {
+  color: var(--clr-yellow);
+  font-family: var(--ff-bungee);
+  border-radius: var(--radius-2);
+  padding: var(--space-600) var(--space-1000);
+  font-size: clamp(0.75rem, 0.659rem + 0.455vw, 1rem);
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='5' ry='5' stroke='%2380FD5DFF' stroke-width='5' stroke-dasharray='10' stroke-dashoffset='6' stroke-linecap='square'/%3e%3c/svg%3e");
+}

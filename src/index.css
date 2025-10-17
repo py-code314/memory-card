@@ -96,6 +96,7 @@ ul {
   --space-400: 1rem;
   --space-600: 1.25rem;
   --space-800: 1.75rem;
+  --space-1000: 2.25rem;
   --space-1225: 2.875rem; /* 46px */
   --space-1850: 4.375rem; /* 70px */
 
@@ -114,7 +115,7 @@ ul {
   --clr-aqua: hsl(180, 100%, 50%);
   --clr-dark-purple: hsl(285, 18%, 17%);
   --clr-yellow: hsl(61, 86%, 59%);
-  --clr-screamin-green: hsl(107, 98%, 68%);
+  --clr-screamin-green: #80fd5d;
   --clr-screamin-green-light: hsla(107, 98%, 68%, 0.502); 
   --clr-light-sea-green: hsl(171, 65%, 42%);
 
