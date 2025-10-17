@@ -5,12 +5,12 @@
   justify-content: center;
   gap: clamp(0.625rem, 0.451rem + 0.732vw, 1rem);
   font-size: var(--fs-600);
-  padding: var(--space-400);
+  padding: clamp(0.125rem, -0.193rem + 1.591vw, 1rem);
 }
 
 .title {
   color: var(--clr-turquoise);
-  font-size: clamp(2rem, 1.591rem + 2.045vw, 3.125rem);
+  font-size: clamp(2.25rem, 1.932rem + 1.591vw, 3.125rem);
   font-family: var(--ff-creepster);
   text-shadow: 2px 2px 0px rgba(255, 255, 0, 1),
     2px -2px 0px rgba(255, 255, 0, 1), -2px 2px 0px rgba(255, 255, 0, 1),
@@ -21,7 +21,7 @@
 }
 
 /* Display title in two rows if screen is less than 865px, */
-@media (max-width: 54.0625rem /* 865px */) {
+@media (max-width: 55rem /* 880px */) {
   .title {
     display: flex;
     flex-direction: column;
