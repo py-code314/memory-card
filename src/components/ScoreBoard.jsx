@@ -1,12 +1,16 @@
 import '../styles/ScoreBoard.css'
 
+/* A component that displays the current score and best score */
 const ScoreBoard = ({ currentScore, bestScore }) => {
   return (
     <div className="score">
+      {/* Current score */}
       <p className="score__current">
         <span className="score__label">Schmeckles collected: </span>
         <span className="score__number">{currentScore}</span>
       </p>
+
+      {/* Best score */}
       <p className="score__best">
         <span className="score__label">Highest dimension jump: </span>
         <span className="score__number">{bestScore}</span>

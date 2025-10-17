@@ -1,8 +1,10 @@
 import '../styles/ImageList.css'
 
+/* A component that displays a list of images */
 export const ImageList = ({ children, isError, isLoading }) => {
   return (
     <>
+      {/* Show error message upon failure to load images */}
       {isError ? (
         <div className="error">
           <p className="error__text">
@@ -12,6 +14,7 @@ export const ImageList = ({ children, isError, isLoading }) => {
         </div>
       ) : (
         <ul className="characters">
+          {/* Show loading spinner while images are loading */}
           {isLoading && (
             <div className="loading">
               <div className="loading__spinner"></div>

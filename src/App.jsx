@@ -7,7 +7,9 @@ import { shuffleCards } from './utils/randomizeArray'
 
 import './App.css'
 
+/* App component - main component for the application */
 function App() {
+  /* State variables */
   const [data, setData] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
@@ -16,11 +18,13 @@ function App() {
   const [bestScore, setBestScore] = useState(0)
   const [showModal, setShowModal] = useState(false)
 
+  /* Fetch data from API */
   useEffect(() => {
     // Add ignore flag and setData(null) - for safety and future proofing
     let ignore = false
     setData(null)
 
+  /* Fetches data from the Rick and Morty API */
     async function fetchData() {
       setIsLoading(true)
       setIsError(false)
@@ -54,6 +58,7 @@ function App() {
     }
   }, [])
 
+  /* Function to shuffle the cards and update the score */ 
   function handleCardClick(e) {
     const cardId = e.currentTarget.id
     shuffleCards(data)
@@ -73,6 +78,7 @@ function App() {
     }
   }
 
+  /* Hide modal on Restart button click */
   function handleBtnClick() {
     setShowModal(false)
   }
@@ -82,6 +88,7 @@ function App() {
       <Header />
 
       <main className="main">
+        {/* Show modal if user clicks on wrong card */}
         {showModal && (
           <ModalDialog
             currentScore={currentScore}
@@ -92,6 +99,7 @@ function App() {
         <ScoreBoard currentScore={currentScore} bestScore={bestScore} />
         <div className="cards">
           <ImageList isLoading={isLoading} isError={isError}>
+            {/* Loop through data and render Image component for each character */}
             {data &&
               data.map((character) => (
                 <Image
@@ -103,6 +111,7 @@ function App() {
               ))}
           </ImageList>
         </div>
+        {/* Footer */}
         <div className="footer">
           <p className="footer__text">Wubba lubba dub dub</p>
         </div>

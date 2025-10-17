@@ -88,14 +88,13 @@ ul {
 
 :root {
   /* Font Size */
-  
   --fs-600: 1.25rem; /* 20px */
-  
 
   /* Spaces */
   --space-70: 0.4375rem;
   --space-100: 0.625rem;
   --space-400: 1rem;
+  --space-600: 1.25rem;
   --space-800: 1.75rem;
   --space-1225: 2.875rem; /* 46px */
   --space-1850: 4.375rem; /* 70px */
@@ -103,19 +102,12 @@ ul {
   --width-content: 75rem; /* 1200px */
   --width-modal: 31.25rem; /* 500px */
 
-  /* Font weights */
-  --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-bold: 700;
-  --fw-extra-bold: 800;
-
   /* Font families */
   --ff-creepster: 'Creepster';
   --ff-bungee: 'Bungee';
   --ff-frijole: 'Frijole';
 
   /* Colors */
- 
   --clr-black: hsla(0, 0%, 0%, 0.6);
   --clr-white: hsl(0, 0%, 100%);
   --clr-turquoise : hsl(188, 100%, 39%);
@@ -130,6 +122,7 @@ ul {
   --radius-2: 0.625rem; /* 10px */
 }
 
+/* Apply background image */
 body {
   background: var(--clr-dark-purple) url('./assets/images/blue-bubble.jpeg')
     no-repeat center;

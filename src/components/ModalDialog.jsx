@@ -1,5 +1,6 @@
 import '../styles/ModalDialog.css'
 
+/* A modal dialog component that displays a game over message */
 const ModalDialog = ({ currentScore, bestScore, handleClick }) => {
   return (
     <>

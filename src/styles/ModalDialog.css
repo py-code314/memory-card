@@ -1,3 +1,4 @@
+/* Backdrop div occupies the whole screen */
 .backdrop {
   background-color: var(--clr-black);
   position: fixed;
@@ -7,6 +8,7 @@
   height: 100%;
   z-index: 99;
 }
+
 
 .dialog {
   display: flex;
@@ -27,6 +29,7 @@
   background: var(--clr-dark-purple) url('../assets/images/space.jpeg')
     no-repeat center;
   background-size: 100% 100%;
+  /* Add box shadow to create 3d effect */
   box-shadow: inset #009688 0 0 0 5px, inset #059c8e 0 0 0 1px,
     inset #0cab9c 0 0 0 10px, inset #1fbdae 0 0 0 11px, inset #8ce9ff 0 0 0 16px,
     inset #48e4d6 0 0 0 17px, inset #e5f9f7 0 0 0 21px, inset #bfecf7 0 0 0 22px;
@@ -55,6 +58,7 @@
   transition: all 0.7s ease-in;
 }
 
+/* Animate button on hover and focus */
 .dialog__btn:hover,
 .dialog__btn:focus-visible {
   animation: flip-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
@@ -64,6 +68,7 @@
   outline: 1px inset var(--clr-yellow);
 }
 
+/* Remove animation on reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .dialog__btn:hover,
   .dialog__btn:focus-visible {
@@ -74,6 +79,7 @@
   }
 }
 
+/* Flip animation */
 @keyframes flip-right {
   0% {
     transform: rotateY(0);
