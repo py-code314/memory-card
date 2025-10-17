@@ -25,7 +25,7 @@ function App() {
     let ignore = false
     setData(null)
 
-  /* Fetches data from the Rick and Morty API */
+    /* Fetches data from the Rick and Morty API */
     async function fetchData() {
       setIsLoading(true)
       setIsError(false)
@@ -59,28 +59,35 @@ function App() {
     }
   }, [])
 
-  /* Function to shuffle the cards and update the score */ 
+  /* Function to shuffle the cards and update the score */
   function handleCardClick(e) {
     const cardId = e.currentTarget.id
     shuffleCards(data)
 
     // Track card clicks for scoring
-    if (!cardIds.includes(cardId)) {
-      setCurrentScore(currentScore + 1)
-      setCardIds([...cardIds, cardId])
-    } else {
+    if (cardIds.includes(cardId)) {
       if (currentScore > bestScore) {
         setBestScore(currentScore)
       }
 
-      setCurrentScore(0)
-      setCardIds([])
       setShowModal(true)
+    } else {
+      // Click on last card
+      if (cardIds.length === 11) {
+        setCurrentScore(() => currentScore + 1)
+        setBestScore(() => currentScore + 1)
+        setShowModal(true)
+      } else {
+        setCurrentScore(() => currentScore + 1)
+        setCardIds([...cardIds, cardId])
+      }
     }
   }
 
   /* Hide modal on Restart button click */
   function handleBtnClick() {
+    setCurrentScore(0)
+    setCardIds([])
     setShowModal(false)
   }
 
